@@ -79,15 +79,15 @@ export default function Nav() {
         }`}
       >
         <div className="px-6 md:px-12 flex justify-between items-center max-w-[2000px] mx-auto">
-          <Link href="/" className="z-50 block group">
+          <Link href="/" className="z-50 block">
             <img
               src={logoMark}
               alt="Studio Harshit Agarwal"
-              className="w-auto transition-all duration-500"
+              className="w-auto transition-opacity duration-500 hover:opacity-80"
               style={{
-                height: 'clamp(2.6rem, 4vw, 3.6rem)',
-                filter:
-                  'brightness(1.8) drop-shadow(0 0 18px rgba(231,186,114,0.22))',
+                height: 'clamp(3.2rem, 5vw, 4.8rem)',
+                mixBlendMode: 'screen',
+                filter: 'brightness(2.2) saturate(1.4)',
               }}
             />
           </Link>

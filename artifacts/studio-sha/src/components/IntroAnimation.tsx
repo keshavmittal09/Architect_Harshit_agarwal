@@ -18,11 +18,11 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
 
   useEffect(() => {
     const t: ReturnType<typeof setTimeout>[] = [];
-    t.push(setTimeout(() => setPhase(1), 400));   // scan line
-    t.push(setTimeout(() => setPhase(2), 1700));  // letterbox open
-    t.push(setTimeout(() => setPhase(3), 3000));  // text
-    t.push(setTimeout(() => setPhase(4), 5200));  // fade
-    t.push(setTimeout(() => onComplete(), 6000)); // done
+    t.push(setTimeout(() => setPhase(1), 300));   // scan line
+    t.push(setTimeout(() => setPhase(2), 1200));  // letterbox open
+    t.push(setTimeout(() => setPhase(3), 2200));  // text
+    t.push(setTimeout(() => setPhase(4), 3800));  // fade
+    t.push(setTimeout(() => onComplete(), 4500)); // done
 
     const skip = () => { t.forEach(clearTimeout); onComplete(); };
     window.addEventListener('click', skip);
