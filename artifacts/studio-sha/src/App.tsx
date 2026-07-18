@@ -46,10 +46,10 @@ function App() {
   const [showIntro, setShowIntro] = useState(false);
 
   useEffect(() => {
-    const hasSeenIntro = sessionStorage.getItem('sha-intro-v3');
+    const hasSeenIntro = sessionStorage.getItem('sha-intro-v2');
     if (!hasSeenIntro) {
       setShowIntro(true);
-      sessionStorage.setItem('sha-intro-v3', 'true');
+      sessionStorage.setItem('sha-intro-v2', 'true');
     }
   }, []);
 
