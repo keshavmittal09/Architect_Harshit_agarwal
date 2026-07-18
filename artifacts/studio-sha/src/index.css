@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+}
+
+:root {
+  --background: 0 0% 9%; /* Charcoal Black #171717 */
+  --foreground: 330 2% 84%; /* Marble White #D6D4D5 */
+
+  --border: 26 22% 23%; /* Walnut Wood #46382D */
+  
+  --card: 0 0% 9%;
+  --card-foreground: 330 2% 84%;
+  --card-border: 26 22% 23%;
+
+  --sidebar: 0 0% 9%;
+  --sidebar-foreground: 330 2% 84%;
+  --sidebar-border: 26 22% 23%;
+  --sidebar-primary: 38 74% 67%;
+  --sidebar-primary-foreground: 0 0% 9%;
+  --sidebar-accent: 30 8% 60%;
+  --sidebar-accent-foreground: 0 0% 9%;
+  --sidebar-ring: 38 74% 67%;
+
+  --popover: 0 0% 9%;
+  --popover-foreground: 330 2% 84%;
+  --popover-border: 26 22% 23%;
+
+  --primary: 38 74% 67%; /* Muted Gold #E7BA72 */
+  --primary-foreground: 0 0% 9%;
+
+  --secondary: 30 8% 60%; /* Warm Stone #A3998F */
+  --secondary-foreground: 0 0% 9%;
+
+  --muted: 30 8% 60%;
+  --muted-foreground: 30 8% 60%;
+
+  --accent: 38 74% 67%;
+  --accent-foreground: 0 0% 9%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+
+  --input: 26 22% 23%;
+  --ring: 38 74% 67%;
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-serif: 'Lora', serif;
+  --app-font-mono: Menlo, monospace;
+  
+  --radius: 0rem;
+
+  --shadow-2xs: none;
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-2xl: none;
+}
+
+@media (hover: hover) { 
+  html { cursor: none; } 
+}
+
+body { 
+  background: #171717; 
+  overflow-x: hidden; 
+}
+
+img { display: block; }
+
+::selection { 
+  background: #E7BA72; 
+  color: #171717; 
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal;
+  }
+}

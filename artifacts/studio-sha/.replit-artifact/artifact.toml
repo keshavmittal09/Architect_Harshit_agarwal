@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Studio Harshit Agarwal"
+version = "1.0.0"
+id = "artifacts/studio-sha"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26108
+
+[services.development]
+run = "pnpm --filter @workspace/studio-sha run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/studio-sha", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/studio-sha/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26108"
+BASE_PATH = "/"

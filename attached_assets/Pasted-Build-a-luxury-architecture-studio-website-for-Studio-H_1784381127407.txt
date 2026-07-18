@@ -1,0 +1,76 @@
+Build a luxury architecture studio 
+website for "Studio Harshit Agarwal," a residential/interior architecture 
+practice based in Bareilly, Uttar Pradesh, India.
+
+BRAND POSITIONING
+Minimal, ultra-luxury, restrained — not a template-luxury site. The studio's 
+own work is the hero; the site should feel like walking into a quiet, 
+confident architecture studio, not a marketing page. Avoid: gradients, drop 
+shadows, rounded-corner cards, stock icons, counters, testimonial sliders, 
+popups, autoplay audio.
+
+DESIGN TOKENS
+Colors (use exactly these, sampled from the studio's own project photography):
+- Charcoal Black #171717 (primary dark background)
+- Warm Stone #A3998F (secondary/muted surfaces)
+- Marble White #D6D4D5 (light background alternative)
+- Walnut Wood #46382D (deep accent, footer/dividers)
+- Muted Gold #E7BA72 (accent only — wordmark, hover states, thin rules; use sparingly, never as a large fill)
+
+Typography: 
+- Display/headings: a refined serif (Lora or similar — elegant, not decorative)
+- Body: a clean neutral sans-serif (Inter or General Sans)
+- Generous letter-spacing on all-caps labels/nav only
+
+Layout: full-bleed photography, generous whitespace, no card grids with 
+shadows — flat, editorial, magazine-like image placement.
+
+ENTRY ANIMATION (critical, build this first)
+1. Black background (#171717) fills the viewport on first visit only 
+   (use sessionStorage so it never replays on internal navigation)
+2. The studio's gold wordmark ("STUDIO HARSHIT AGARWAL") fades and 
+   scales in gently, centered, in the serif display font, gold (#E7BA72) 
+   on black
+3. Holds for ~0.4 seconds
+4. Dissolves (opacity crossfade, no wipe/slide) into the homepage hero
+5. Total duration: 1.5–2.2 seconds, no longer
+6. Skippable at any time via tap, click, or scroll
+7. Shortened to ~1 second (or replaced with a simple fade) on mobile
+8. Build with CSS/SVG or lightweight JS — no heavy Lottie or video file 
+   for this moment; keep total weight under ~200KB
+
+SITE STRUCTURE (4 pages only — do not add Team, Press, Alumni, or blog)
+1. Home — full-bleed hero image, one-line poetic tagline (not a paragraph), 
+   minimal nav (logo + 3 links), scroll reveals 1-2 selected projects, footer
+2. Studio — founder photo, first-person philosophy statement (his own 
+   voice), no team roster
+3. Work — grid of 3-5 projects, one hero image each, name/location/year 
+   label, no filters
+4. Project Detail (template, reused per project) — image gallery (5-10 
+   images), metadata table (name, location, year, typology, size, 
+   materials), 100-150 word concept note
+5. Contact — qualification-style form: name, email, project type 
+   (residential/commercial/hospitality), location, approximate budget/size, 
+   timeline. Plus direct phone/email and social links.
+
+MOTION GUIDELINES
+- Page transitions: soft fade, 200-300ms, never instant cuts
+- Image hover: subtle scale 1.02-1.05x only
+- Standard native scroll — no scroll-jacking, no parallax
+- Images fade in on load, reserve layout space to avoid shift
+
+VOICE / COPY
+Write like the work is speaking, not selling. "Facade Study — Sandstone, 
+Morning Light" instead of "BEST MATERIALS FOR ELEVATION FACADE." Short, 
+declarative, unhurried captions under images, not overlay text on them.
+
+CONTENT (use clearly-labeled placeholder text/images for now — do not 
+invent fake press mentions, testimonials, or team members)
+
+TECHNICAL
+- Fully responsive: desktop (1440/1920), tablet (768-1024), mobile 
+  (375-428)
+- Performance target: LCP under 2.5s, page weight under ~3MB
+- Semantic HTML, one H1 per page, alt text on all images
+- CMS-ready structure for the Work/Project Detail pages so new projects 
+  can be added without touching code
