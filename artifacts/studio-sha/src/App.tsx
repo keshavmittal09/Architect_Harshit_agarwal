@@ -10,7 +10,6 @@ import { useLocation } from 'wouter';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import IntroAnimation from '@/components/IntroAnimation';
-import CustomCursor from '@/components/CustomCursor';
 import FilmGrain from '@/components/FilmGrain';
 import SmoothScroll from '@/components/SmoothScroll';
 
@@ -58,7 +57,6 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <SmoothScroll>
-          <CustomCursor />
           <FilmGrain />
           {showIntro && <IntroAnimation onComplete={() => setShowIntro(false)} />}
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>

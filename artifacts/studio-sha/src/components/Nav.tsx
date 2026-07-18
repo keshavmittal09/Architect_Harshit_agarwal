@@ -79,8 +79,17 @@ export default function Nav() {
         }`}
       >
         <div className="px-6 md:px-12 flex justify-between items-center max-w-[2000px] mx-auto">
-          <Link href="/" className="z-50 block">
-            <img src={logoMark} alt="Studio Harshit Agarwal" className="h-9 w-auto" />
+          <Link href="/" className="z-50 block group">
+            <img
+              src={logoMark}
+              alt="Studio Harshit Agarwal"
+              className="w-auto transition-all duration-500"
+              style={{
+                height: 'clamp(2.6rem, 4vw, 3.6rem)',
+                filter:
+                  'brightness(1.8) drop-shadow(0 0 18px rgba(231,186,114,0.22))',
+              }}
+            />
           </Link>
 
           {/* Desktop Nav */}

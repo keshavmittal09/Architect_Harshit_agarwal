@@ -50,14 +50,27 @@ export default function Home() {
       <main className="flex-1 w-full flex flex-col bg-background">
         {/* Section 1: Hero */}
         <section className="relative w-full h-[100dvh] overflow-hidden flex flex-col items-center justify-center">
-          <motion.div style={{ y }} className="absolute inset-0 w-full h-[120%] -top-[10%]">
-            <img
-              src={bgImg}
-              alt="Architecture Background"
-              className="w-full h-full object-cover saturate-[0.3]"
-            />
+          {/* Breathing parallax background */}
+          <motion.div style={{ y }} className="absolute inset-0 w-full h-[130%] -top-[15%]">
+            <div
+              className="w-full h-full"
+              style={{ animation: 'heroBreathe 22s ease-in-out infinite' }}
+            >
+              <img
+                src={bgImg}
+                alt="Architecture Background"
+                className="w-full h-full object-cover"
+                style={{ filter: 'saturate(0.25) brightness(0.55)' }}
+              />
+            </div>
           </motion.div>
-          <div className="absolute inset-0 bg-[#171717]/60" />
+          {/* Gradient overlay layers */}
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(180deg, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.1) 40%, rgba(8,8,8,0.6) 100%)',
+          }} />
+          <div className="absolute inset-0" style={{
+            background: 'radial-gradient(ellipse 100% 70% at 50% 50%, transparent 40%, rgba(8,8,8,0.55) 100%)',
+          }} />
           
           <div className="relative z-10 flex flex-col items-center justify-center px-6">
             <span className="font-sans text-[0.65rem] uppercase tracking-[0.25em] text-secondary mb-6 block">
