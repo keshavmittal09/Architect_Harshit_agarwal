@@ -5,7 +5,7 @@ interface TextRevealProps {
   children: string;
   className?: string;
   delay?: number;
-  as?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
+  as?: 'div' | 'h1' | 'h2' | 'h3' | 'p' | 'span';
 }
 
 export default function TextReveal({
